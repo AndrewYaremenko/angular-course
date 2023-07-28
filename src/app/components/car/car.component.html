@@ -1,4 +1,28 @@
-<p>car works!</p>
-<p>{{name}}</p>
-<p>{{speed}}</p>
-<p>{{model}}</p>
+<div class="container">
+    <br>
+    <h4>
+        <mark>{{name}}</mark>
+        <small>{{model}}</small>
+    </h4>
+    <div class="alert alert-success">
+        Parameters:
+        <ul>
+            <li>Speed: <strong>{{speed}}</strong></li>
+            <li>Color car: <strong>{{colors.car}}</strong></li>
+            <li>Color salon: <strong>{{colors.salon}}</strong></li>
+            <li>Color wheels: <strong>{{colors.wheels}}</strong></li>
+        </ul>
+    </div>
+
+    <h5>Car optins</h5>
+    <div class="alert alert-warning">
+        <ul>
+            <li *ngFor="let option of options; let i = index">{{(i + 1) + " " +option}}</li>
+        </ul>
+    </div>
+
+    <h3>Choose auto</h3>
+    <button class="btn btn-danger" (click)="carSelect('BMW')">BMW</button>
+    <button class="btn btn-success" (click)="carSelect('Audi')">Audi</button>
+    <button class="btn btn-info" (click)="carSelect('Mersedes')">Mersedes</button>
+</div>
