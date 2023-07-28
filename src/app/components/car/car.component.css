@@ -2,3 +2,17 @@ button {
     margin-right: 10px;
     color: white;
 }
+
+.btn-add {
+    margin: 10px 0px 10px;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
+.btn-delete {
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 8px;
+}

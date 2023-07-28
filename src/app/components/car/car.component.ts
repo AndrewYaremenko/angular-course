@@ -68,6 +68,19 @@ export class CarComponent implements OnInit {
       ];
     }
   }
+
+  addOption(option: string): boolean {
+    this.options.push(option);
+    return false;
+  }
+
+  deleteOption(option: string): boolean {
+    const index = this.options.indexOf(option);
+    if (index !== -1) {
+      this.options.splice(index, 1);
+    }
+    return false;
+  }
 }
 
 interface Colors {

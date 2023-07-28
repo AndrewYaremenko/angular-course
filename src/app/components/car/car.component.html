@@ -14,10 +14,18 @@
         </ul>
     </div>
 
-    <h5>Car optins</h5>
+    <h5>Car options</h5>
+    <form (submit)="addOption(optionFromForm.value)">
+        <div class="form">
+            <label for="option" class="form-label">Add new option</label>
+            <input type="text" id="option" class="form-control" placeholder="Input something" #optionFromForm>
+            <button type="submit" class="btn btn-primary btn-add">Add</button>
+        </div>
+    </form>
     <div class="alert alert-warning">
         <ul>
-            <li *ngFor="let option of options; let i = index">{{(i + 1) + " " +option}}</li>
+            <li *ngFor="let option of options; let i = index">{{(i + 1) + " " +option}} <button
+                    class="btn btn-danger btn-delete" (click)="deleteOption(option)">X</button></li>
         </ul>
     </div>
 
