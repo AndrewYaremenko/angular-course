@@ -14,6 +14,34 @@
         </ul>
     </div>
 
+    <h5>Object edit</h5>
+    <button class="btn btn-success mb-1" (click)="showEdit()">Edit</button>
+    <form *ngIf="isEdit">
+        <div class="mb-3">
+            <input type="text" placeholder="Car name" class="form-control" [(ngModel)]="name" name="name">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" placeholder="Car model" class="form-control" [(ngModel)]="model" name="model">
+        </div>
+
+        <div class="mb-3">
+            <input type="number" placeholder="Car speed" class="form-control" [(ngModel)]="speed" name="speed">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" placeholder="Car color" class="form-control" [(ngModel)]="colors.car" name="carColor">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" placeholder="Salon color" class="form-control" [(ngModel)]="colors.salon" name="salonColor">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" placeholder="Wheels color" class="form-control" [(ngModel)]="colors.wheels" name="wheelsColor">
+        </div>
+    </form>
+
     <h5>Car options</h5>
     <form (submit)="addOption(optionFromForm.value)">
         <div class="form">

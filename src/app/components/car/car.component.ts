@@ -12,6 +12,7 @@ export class CarComponent implements OnInit {
   model: string;
   colors: Colors;
   options: string[];
+  isEdit: boolean;
 
   constructor() { }
 
@@ -27,6 +28,7 @@ export class CarComponent implements OnInit {
     this.options = [
       "ABS", "Autopilot", "Autoparking"
     ];
+    this.isEdit = false;
   }
 
   carSelect(carName: string): void {
@@ -80,6 +82,10 @@ export class CarComponent implements OnInit {
       this.options.splice(index, 1);
     }
     return false;
+  }
+
+  showEdit(): void {
+    this.isEdit = !this.isEdit;
   }
 }
 
